@@ -1,7 +1,18 @@
-<h1>Lists</h1>
-<ul>
-  <% @lists.each do |list| %>
-    <li><%= link_to list.name, list_path(list) %></li>
-  <% end %>
-</ul>
-<%= link_to "Add a new list", new_list_path %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://pyxis.nymag.com/v1/imgs/978/4d0/4b4779e1dcb86984abe55c08366f9babe7-13-empty-theater.jpg);">
+  <div class="container">
+    <h1>My Lists</h1>
+      <%= link_to "Add a new list", new_list_path, class:"btn btn-secondary" %>
+  </div>
+</div>
+<br>
+<div class="container">
+  <ul>
+  <div class="cards">
+    <% @lists.each do |list| %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://s3.amazonaws.com/libapps/accounts/28850/images/Film_Reel.jpg)">
+      <%= link_to list.name, list_path(list) %>
+    </div>
+    <% end %>
+  </div>
+  </ul>
+</div>
