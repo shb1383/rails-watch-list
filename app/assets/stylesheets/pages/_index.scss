@@ -1,6 +1,11 @@
 // Import page-specific CSS files here.
 @import "home";
 
+body {
+  color: white;
+  background-color: black;
+}
+
 .banner {
   background-size: cover;
   background-position: center;
